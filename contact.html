@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact | GNAI TV</title>
+  <meta name="description" content="Contact GNAI TV for partnerships, services, and project inquiries.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://gnaitv.net/contact.html">
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="/">GNAI TV</a>
+      <button id="menu-toggle" class="menu-toggle" aria-label="Toggle menu">☰</button>
+      <nav id="site-nav" class="site-nav" aria-label="Main">
+        <a href="/">Home</a>
+        <a href="/about.html">About</a>
+        <a href="/services.html">Services</a>
+        <a href="/contact.html" aria-current="page">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container prose">
+      <h1>Contact Us</h1>
+      <p>Email: <a href="mailto:contact@gnaitv.net">contact@gnaitv.net</a></p>
+      <form id="contact-form" class="card" action="#" method="post">
+        <label>Name <input type="text" name="name" required></label>
+        <label>Email <input type="email" name="email" required></label>
+        <label>Message <textarea name="message" rows="5" required></textarea></label>
+        <button class="btn" type="submit">Send</button>
+        <p id="form-status" class="muted" aria-live="polite"></p>
+      </form>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> GNAI TV. All rights reserved.</p>
+    </div>
+  </footer>
+  <script src="/assets/js/main.js" defer></script>
+</body>
+</html>
