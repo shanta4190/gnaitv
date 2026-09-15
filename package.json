@@ -1,0 +1,13 @@
+{
+  "name": "gnaitv",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Static website for gnaitv.net",
+  "scripts": {
+    "test": "node scripts/validate-site.mjs",
+    "build": "node scripts/build.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

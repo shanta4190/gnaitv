@@ -1,0 +1,9 @@
+title: GNAI TV
+email: contact@gnaitv.net
+description: GNAI TV official website
+url: https://gnaitv.net
+baseurl: ""
+markdown: kramdown
+theme: minima
+plugins:
+  - jekyll-seo-tag
