@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Security | GNAI TV</title>
+    <meta
+      name="description"
+      content="Review the GNAI TV application-level security prototype and Cloudflare-only deployment safeguards."
+    />
+    <link rel="canonical" href="https://gnaitv.net/security.html" />
+    <link rel="stylesheet" href="/assets/css/site.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="shell header-row">
+        <a class="brand" href="/" aria-label="GNAI TV home">
+          <span class="brand-mark">G</span>
+          <span class="brand-copy">
+            <strong>GNAI TV</strong>
+            <span>Security prototype</span>
+          </span>
+        </a>
+        <nav class="nav" aria-label="Primary">
+          <a href="/">Home</a>
+          <a href="/watch.html">Watch</a>
+          <a href="/channels.html">Channels</a>
+          <a href="/youtube-media.html">Media</a>
+          <a href="/security.html" aria-current="page">Security</a>
+          <a href="/google-console.html">Setup</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="shell">
+      <section class="page-title">
+        <span class="eyebrow">Security package</span>
+        <h1>Application-level security prototype</h1>
+        <p>
+          This dashboard intentionally avoids overstating protections. It describes the current
+          build as an application-level prototype and reserves kernel or eBPF interception for a
+          future privileged research module.
+        </p>
+      </section>
+
+      <section class="section">
+        <div id="security-core-output">
+          <div class="empty-state">Loading security core status.</div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="split">
+          <article class="panel">
+            <span class="kicker">Architecture</span>
+            <h2>Security core layout</h2>
+            <ul class="list">
+              <li>File Inspection Engine: SHA-256, signatures, entropy signal, allow/review/block</li>
+              <li>Quarantine Service: isolated evidence handling and administrator review</li>
+              <li>Privacy Auditor: header policy, cookie classification, tracker detection, audit event</li>
+              <li>Evidence Ledger: timestamped append-only decision records</li>
+              <li>GNAI TV Admin: Cloudflare Access, authorized identity, MFA/passkey, default deny</li>
+            </ul>
+          </article>
+          <article class="panel">
+            <span class="kicker">Milestone order</span>
+            <h2>Implementation guidance</h2>
+            <ul class="list">
+              <li>Build checksum and evidence logging before any privileged interception research.</li>
+              <li>Integrate security telemetry into the admin dashboard first.</li>
+              <li>Use entropy as a suspicious-review signal, not automatic ransomware proof.</li>
+              <li>Do not represent header filtering as completed GDPR compliance.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="shell">
+        <p>Production access should remain behind Cloudflare Access with owner-controlled review.</p>
+      </div>
+    </footer>
+
+    <script src="/assets/js/security-dashboard.js"></script>
+  </body>
+</html>

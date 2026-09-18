@@ -1,0 +1,38 @@
+name: Security gate
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  security-gate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Verify required security files
+        run: |
+          test -f .github/CODEOWNERS
+          test -f SECURITY.md
+          test -f docs/protected-branch-ruleset-template.json
+          test -f docs/private-repository-lockdown-checklist.md
+
+      - name: Enforce Cloudflare-only deployment posture
+        run: |
+          if grep -R -n -E "actions/deploy-pages|deploy-pages|peaceiris/actions-gh-pages|vercel|netlify" .github/workflows; then
+            echo "Found a disallowed non-Cloudflare deployment workflow reference."
+            exit 1
+          fi
+
+      - name: Block obvious committed secret files
+        run: |
+          if find . -type f \( -name ".env" -o -name ".env.*" -o -name "*.pem" -o -name "*.key" -o -name "*.p12" -o -name "*.age" \) \
+            -not -path "./node_modules/*" | grep .; then
+            echo "Tracked secret-like files are not allowed."
+            exit 1
+          fi

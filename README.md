@@ -10,12 +10,22 @@ gnaitv/
 ├── assets/
 │   ├── css/site.css
 │   └── js/youtube-plugin.js
+├── docs/
+│   ├── incident-response-policy.md
+│   ├── private-repository-lockdown-checklist.md
+│   └── protected-branch-ruleset-template.json
 ├── functions/
 │   └── api/
 │       ├── health.js
 │       ├── live.js
+│       ├── security-core.js
 │       └── youtube-uploads.js
+├── scripts/
+│   └── security/
+│       ├── decrypt-with-age.sh
+│       └── encrypt-with-age.sh
 ├── .gitignore
+├── SECURITY.md
 ├── _headers
 ├── channels.html
 ├── config.js
@@ -23,6 +33,7 @@ gnaitv/
 ├── index.html
 ├── robots.txt
 ├── sitemap.xml
+├── security.html
 ├── watch.html
 ├── wrangler.toml
 └── youtube-media.html
@@ -84,3 +95,23 @@ http://localhost:8788/api/youtube-uploads
 - `api/live` defaults to `{"live":false}` until an authorized live video is configured.
 - Use only approved and authorized media sources.
 - Never commit API keys, tokens, `.env`, or `.dev.vars`.
+
+## Security package
+
+This repository now includes a GNAI TV security package with:
+
+- owner-controlled `CODEOWNERS`
+- a GitHub Actions security gate
+- a protected-branch ruleset template
+- a private-repository lockdown checklist
+- a security and incident policy
+- interactive `age` encryption/decryption helper scripts
+- secret-file exclusions in `.gitignore`
+- Cloudflare-only deployment safeguards
+
+The current dashboard framing is intentionally accurate:
+
+- application-level security prototype
+- no kernel, driver, NVMe, or eBPF interception is claimed as deployed
+- entropy is treated as a review signal, not proof of ransomware
+- compliance status is not represented as established by simple header filtering

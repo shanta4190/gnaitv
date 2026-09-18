@@ -4,6 +4,7 @@ window.GNAITV_CONFIG = {
   api: {
     health: "/api/health",
     live: "/api/live",
-    uploads: "/api/youtube-uploads"
+    uploads: "/api/youtube-uploads",
+    security: "/api/security-core"
   }
 };

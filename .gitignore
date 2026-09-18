@@ -5,3 +5,10 @@ node_modules/
 dist/
 .wrangler/
 *.log
+*.pem
+*.key
+*.p12
+*.crt
+*.age
+secrets/
+vault/
