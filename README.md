@@ -159,6 +159,7 @@ Expected results:
  ```
 Security controls
 The root _headers file applies browser security protections where supported by Cloudflare Pages, including Content Security Policy, MIME-sniffing protection, clickjacking protection, Referrer Policy, and Permissions Policy.
+See `SECURITY.md` for the Shanta Econ security-core prototype status, architecture, and roadmap.
 Rules:
 	●	Never commit .env, .dev.vars, API keys, tokens, passwords, or authentication codes.
 	●	Use Cloudflare Access for any future private administration portal.
@@ -226,4 +227,3 @@ GNAI TV, GNAIAAAC LLC, SHANTA ECON ECOSYSTEM OS, SSGPT6 Creator OS, and associat
 Unless a separate license file is added, no open-source license is granted. All rights are reserved by the project owner.
 Support boundary
 This repository provides web software and Cloudflare Pages Functions. It does not itself provide a television broadcast license, spectrum authorization, satellite or RF transmission, a linear encoder, third-party streaming rights, or automatic regulatory approval. Those capabilities require separate contracts, licenses, verified accounts, technical infrastructure, and human authorization.
-
