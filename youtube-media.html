@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Media | GNAI TV</title>
+    <meta
+      name="description"
+      content="View the GNAI TV recorded media page and recent YouTube uploads."
+    />
+    <link rel="canonical" href="https://gnaitv.net/youtube-media.html" />
+    <link rel="stylesheet" href="/assets/css/site.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="shell header-row">
+        <a class="brand" href="/" aria-label="GNAI TV home">
+          <span class="brand-mark">G</span>
+          <span class="brand-copy">
+            <strong>GNAI TV</strong>
+            <span>Recorded media</span>
+          </span>
+        </a>
+        <nav class="nav" aria-label="Primary">
+          <a href="/">Home</a>
+          <a href="/watch.html">Watch</a>
+          <a href="/channels.html">Channels</a>
+          <a href="/youtube-media.html" aria-current="page">Media</a>
+          <a href="/google-console.html">Setup</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="shell">
+      <section class="page-title">
+        <span class="eyebrow">Recorded programming</span>
+        <h1>Recent uploads and replay-ready media</h1>
+        <p>
+          Use this page for authorized replay content, explainers, and packaged reports. Recent
+          uploads appear automatically when YouTube production variables are configured.
+        </p>
+      </section>
+
+      <section class="section">
+        <div class="status-grid">
+          <article id="uploads-card" class="status-card">
+            <span class="status-pill status-warn">Loading</span>
+            <h3>Recorded media feed</h3>
+            <p>Checking recent upload integration.</p>
+          </article>
+          <article class="status-card">
+            <span class="status-pill status-ok">Ready</span>
+            <h3>Replay workflow</h3>
+            <p>Use authorized videos for recaps, explainers, and archived event packages.</p>
+          </article>
+          <article class="status-card">
+            <span class="status-pill status-warn">Guarded</span>
+            <h3>Credential safety</h3>
+            <p>YouTube API credentials belong in Cloudflare variables, never in committed code.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-heading">
+          <div>
+            <span class="kicker">Uploads</span>
+            <h2>Recent YouTube items</h2>
+          </div>
+        </div>
+        <div id="uploads-list" class="uploads-grid">
+          <div class="empty-state">Loading recent uploads.</div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="shell">
+        <p>Recorded media should reflect approved and authorized public programming only.</p>
+      </div>
+    </footer>
+
+    <script src="/config.js"></script>
+    <script src="/assets/js/youtube-plugin.js"></script>
+  </body>
+</html>

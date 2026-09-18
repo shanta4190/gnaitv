@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YouTube Setup | GNAI TV</title>
+    <meta
+      name="description"
+      content="Review the safe Google Cloud Console and YouTube setup process for GNAI TV."
+    />
+    <link rel="canonical" href="https://gnaitv.net/google-console.html" />
+    <link rel="stylesheet" href="/assets/css/site.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="shell header-row">
+        <a class="brand" href="/" aria-label="GNAI TV home">
+          <span class="brand-mark">G</span>
+          <span class="brand-copy">
+            <strong>GNAI TV</strong>
+            <span>YouTube integration checklist</span>
+          </span>
+        </a>
+        <nav class="nav" aria-label="Primary">
+          <a href="/">Home</a>
+          <a href="/watch.html">Watch</a>
+          <a href="/channels.html">Channels</a>
+          <a href="/youtube-media.html">Media</a>
+          <a href="/google-console.html" aria-current="page">Setup</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="shell">
+      <section class="page-title">
+        <span class="eyebrow">Safe setup</span>
+        <h1>Google Console and YouTube checklist</h1>
+        <p>Configure uploads without exposing secrets in the repository, screenshots, or chat.</p>
+      </section>
+
+      <section class="section">
+        <article class="panel">
+          <h2>Production setup flow</h2>
+          <ol class="list">
+            <li>Create or select the GNAI TV project in Google Cloud Console.</li>
+            <li>Enable only the YouTube Data API v3.</li>
+            <li>Create a restricted API key for that API.</li>
+            <li>Find the public YouTube channel ID that begins with <code>UC</code>.</li>
+            <li>Add the values to Cloudflare Pages production variables.</li>
+            <li>Redeploy the site after the variables are saved.</li>
+          </ol>
+        </article>
+      </section>
+
+      <section class="section">
+        <div class="split">
+          <article class="panel">
+            <h2>Variables used by this site</h2>
+            <ul class="list">
+              <li><code>YOUTUBE_API_KEY</code></li>
+              <li><code>YOUTUBE_CHANNEL_ID</code></li>
+              <li><code>GNAITV_LIVE_VIDEO_ID</code> (optional)</li>
+            </ul>
+          </article>
+          <article class="panel">
+            <h2>Safety rules</h2>
+            <ul class="list">
+              <li>Never commit secrets or store them in version control.</li>
+              <li>Do not paste credentials into issues, pull requests, or chat.</li>
+              <li>Keep live mode disabled until the broadcast source is verified.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="shell">
+        <p>Credential handling stays inside Cloudflare production variables.</p>
+      </div>
+    </footer>
+  </body>
+</html>
