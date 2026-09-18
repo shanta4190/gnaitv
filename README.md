@@ -97,9 +97,9 @@ Test locally:
  ```
 Use an ignored .dev.vars only on a trusted computer when local secret testing is necessary.
 Deploy with GitHub and Cloudflare Pages
-	1.	Push this complete directory to shanta4100/gnaitv on branch main.
+	1.	Push this complete directory to shanta4190/gnaitv on branch main.
 	2.	In Cloudflare, open Workers & Pages → Create or connect project.
-	3.	Select shanta4100/gnaitv.
+	3.	Select shanta4190/gnaitv.
 	4.	Set:
 ```text
  Production branch: main
@@ -184,9 +184,9 @@ Troubleshooting
 Cloudflare deploys only the README
 The GitHub repository does not yet contain the website package. Upload the extracted repository contents so index.html, assets/, and functions/ exist at the root.
 Astro starter appears
-Cloudflare is connected to astro-blog-starter-template. Disconnect that source and connect shanta4100/gnaitv.
+Cloudflare is connected to astro-blog-starter-template. Disconnect that source and connect shanta4190/gnaitv.
 API routes return a custom 404 page
-The root functions/ directory was absent from the deployed source, or the wrong output directory was selected. Set the output directory to ..
+The root functions/ directory was absent from the deployed source, or the wrong output directory was selected. Set the output directory to .
 YouTube uploads report configured:false
 Add YOUTUBE_API_KEY and YOUTUBE_CHANNEL_ID to the Production environment, then redeploy.
 The player shows offline
