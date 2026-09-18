@@ -1,68 +1,63 @@
-import Image from "next/image";
 import styles from "./page.module.css";
+
+const highlights = [
+  {
+    title: "Recorded Programming",
+    description:
+      "Watch curated YouTube-based episodes, interviews, and educational media in one streamlined experience.",
+  },
+  {
+    title: "Trusted Knowledge Library",
+    description:
+      "Explore organized channel topics and verified source material tailored for learning and research.",
+  },
+  {
+    title: "Future Live Broadcasts",
+    description:
+      "Prepare for approval-controlled live sessions built with compliance, editorial review, and transparency.",
+  },
+];
 
 export default function Home() {
   return (
     <div className={styles.page}>
+      <header className={styles.hero}>
+        <p className={styles.badge}>GNAITV</p>
+        <h1>Media and knowledge programming for the GNAI community.</h1>
+        <p>
+          GNAITV is the official digital destination for recorded programming,
+          channel discovery, and future live experiences.
+        </p>
+        <div className={styles.actions}>
+          <a href="#programming" className={styles.primaryAction}>
+            Explore Programming
+          </a>
+          <a href="#about" className={styles.secondaryAction}>
+            About GNAITV
+          </a>
+        </div>
+      </header>
+
       <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className={styles.intro}>
-          <h1>
-            To get started, edit the{" "}
-            <code className={styles.code}>page.js</code> file.
-          </h1>
+        <section id="programming" className={styles.section}>
+          <h2>What you can access today</h2>
+          <div className={styles.grid}>
+            {highlights.map((item) => (
+              <article key={item.title} className={styles.card}>
+                <h3>{item.title}</h3>
+                <p>{item.description}</p>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section id="about" className={styles.section}>
+          <h2>Built for responsible publishing</h2>
           <p>
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learning
-            </a>{" "}
-            center.
+            Every content flow is designed around source verification, review
+            gates, and human approval so programming quality stays high.
           </p>
-        </div>
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className={styles.secondary}
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
+        </section>
       </main>
     </div>
   );
