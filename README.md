@@ -97,9 +97,9 @@ Test locally:
  ```
 Use an ignored .dev.vars only on a trusted computer when local secret testing is necessary.
 Deploy with GitHub and Cloudflare Pages
-	1.	Push this complete directory to shanta4100/gnaitv on branch main.
+	1.	Push this complete directory to shanta4190/gnaitv on branch main.
 	2.	In Cloudflare, open Workers & Pages → Create or connect project.
-	3.	Select shanta4100/gnaitv.
+	3.	Select shanta4190/gnaitv.
 	4.	Set:
 ```text
  Production branch: main
@@ -182,9 +182,9 @@ Publish only when founder approval, editorial approval, and compliance review ha
 Prohibited behavior includes private-frequency interception, unauthorized satellite collection, fabricated breaking-news claims, mass unsolicited media outreach, bypassing source restrictions, and autonomous public publishing without human approval.
 Troubleshooting
 Cloudflare deploys only the README
-The GitHub repository does not yet contain the website package. Upload the extracted repository contents so index.html, assets/, and functions/ exist at the root.
+The deployed source does not include the complete website package. Ensure index.html, assets/, and functions/ are present at the repository root and that Cloudflare is publishing this branch.
 Astro starter appears
-Cloudflare is connected to astro-blog-starter-template. Disconnect that source and connect shanta4100/gnaitv.
+Cloudflare is connected to astro-blog-starter-template. Disconnect that source and connect shanta4190/gnaitv.
 API routes return a custom 404 page
 The root functions/ directory was absent from the deployed source, or the wrong output directory was selected. Set the output directory to ..
 YouTube uploads report configured:false

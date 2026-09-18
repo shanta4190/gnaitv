@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Channels | GNAI TV</title>
+    <meta name="description" content="Channel and endpoint directory for GNAI TV.">
+    <link rel="canonical" href="https://gnaitv.net/channels.html">
+    <link rel="stylesheet" href="/assets/css/site.css">
+  </head>
+  <body>
+    <header>
+      <span class="badge">Channels</span>
+      <h1>Channel directory</h1>
+      <p>Operational links for public viewing, upload metadata, and deployment health checks.</p>
+      <nav aria-label="Primary">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/watch.html">Watch</a></li>
+          <li><a href="/youtube-media.html">YouTube Media</a></li>
+          <li><a href="/google-console.html">Google Console</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="grid">
+        <article class="card">
+          <h2>Website destinations</h2>
+          <ul class="endpoint-list">
+            <li><a href="https://gnaitv.net/">https://gnaitv.net/</a></li>
+            <li><a href="https://www.gnaitv.net/">https://www.gnaitv.net/</a></li>
+            <li><a href="https://gnaitv.pages.dev/">https://gnaitv.pages.dev/</a></li>
+          </ul>
+        </article>
+        <article class="card">
+          <h2>API routes</h2>
+          <ul class="endpoint-list">
+            <li><a href="/api/health">Health</a></li>
+            <li><a href="/api/live">Live status</a></li>
+            <li><a href="/api/youtube-uploads">Recent uploads</a></li>
+          </ul>
+        </article>
+        <article class="card">
+          <h2>Operational notes</h2>
+          <p>Keep publishing on Cloudflare Pages and avoid routing the domain to unrelated hosts or placeholder DNS records.</p>
+        </article>
+      </section>
+    </main>
+
+    <footer>
+      <small>Public channel metadata can be supplied through Cloudflare environment variables.</small>
+    </footer>
+  </body>
+</html>

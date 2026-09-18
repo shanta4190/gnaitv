@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Google Console | GNAI TV</title>
+    <meta name="description" content="Safe Google Cloud Console and YouTube API setup checklist for GNAI TV.">
+    <link rel="canonical" href="https://gnaitv.net/google-console.html">
+    <link rel="stylesheet" href="/assets/css/site.css">
+  </head>
+  <body>
+    <header>
+      <span class="badge">Google Console</span>
+      <h1>Safe setup checklist</h1>
+      <p>Configure YouTube upload metadata on the server side without exposing API keys in the browser.</p>
+      <nav aria-label="Primary">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/watch.html">Watch</a></li>
+          <li><a href="/channels.html">Channels</a></li>
+          <li><a href="/youtube-media.html">YouTube Media</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="notice">
+        <h2>Checklist</h2>
+        <ol class="checklist">
+          <li>Create or select the GNAI TV project in Google Cloud Console.</li>
+          <li>Enable YouTube Data API v3 only.</li>
+          <li>Create an API key and restrict it to that API.</li>
+          <li>Copy the public YouTube channel ID beginning with <span class="code">UC</span>.</li>
+          <li>Store both values in Cloudflare Pages Production variables.</li>
+          <li>Redeploy after updating variables.</li>
+        </ol>
+      </section>
+    </main>
+
+    <footer>
+      <small>Do not commit or paste API credentials into the repository, screenshots, or chat.</small>
+    </footer>
+  </body>
+</html>

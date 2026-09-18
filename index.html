@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>GNAI TV</title>
+    <meta name="description" content="GNAI TV recorded programming, publishing guidance, and Cloudflare Pages deployment endpoints.">
+    <link rel="canonical" href="https://gnaitv.net/">
+    <link rel="stylesheet" href="/assets/css/site.css">
+    <script src="/config.js" defer></script>
+    <script src="/assets/js/youtube-plugin.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <span class="badge">Cloudflare Pages website package</span>
+      <h1>GNAI TV</h1>
+      <p>Recorded YouTube programming, deployment health endpoints, and publishing guidance for gnaitv.net.</p>
+      <nav aria-label="Primary">
+        <ul>
+          <li><a href="/watch.html">Watch</a></li>
+          <li><a href="/channels.html">Channels</a></li>
+          <li><a href="/youtube-media.html">YouTube Media</a></li>
+          <li><a href="/google-console.html">Google Console</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <h2>Deployment and publishing status</h2>
+        <p data-live-status>Checking live status…</p>
+        <p>The website is designed for Cloudflare Pages with root-level Pages Functions and no build step.</p>
+      </section>
+
+      <section class="status-grid" aria-label="Publishing summary">
+        <article>
+          <h3>Canonical deployment</h3>
+          <p>Production branch: <span class="code">main</span><br>Build command: empty<br>Build output directory: <span class="code">.</span></p>
+        </article>
+        <article>
+          <h3>Supported endpoints</h3>
+          <ul class="endpoint-list">
+            <li><a href="/api/health">/api/health</a></li>
+            <li><a href="/api/live">/api/live</a></li>
+            <li><a href="/api/youtube-uploads">/api/youtube-uploads</a></li>
+          </ul>
+        </article>
+        <article>
+          <h3>Publishing controls</h3>
+          <p>Automated public publishing remains disabled pending review, approval, and compliance gates.</p>
+        </article>
+      </section>
+
+      <section class="grid">
+        <article class="card">
+          <h3>Recent uploads</h3>
+          <div data-youtube-uploads-target>
+            <ul class="upload-list">
+              <li>Loading upload metadata…</li>
+            </ul>
+          </div>
+        </article>
+        <article class="card">
+          <h3>Deployment guidance</h3>
+          <p>Keep <span class="code">functions/</span> at the repository root so Cloudflare detects the API routes during Pages publishing.</p>
+          <p><a class="button" href="https://gnaitv.pages.dev/" target="_blank" rel="noreferrer">Open Pages hostname</a></p>
+        </article>
+      </section>
+    </main>
+
+    <footer>
+      <small>Public domains: gnaitv.net and www.gnaitv.net</small>
+    </footer>
+  </body>
+</html>

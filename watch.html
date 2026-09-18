@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Watch | GNAI TV</title>
+    <meta name="description" content="Recorded-video and live-status viewing page for GNAI TV.">
+    <link rel="canonical" href="https://gnaitv.net/watch.html">
+    <link rel="stylesheet" href="/assets/css/site.css">
+    <script src="/config.js" defer></script>
+    <script src="/assets/js/youtube-plugin.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <span class="badge">Watch</span>
+      <h1>Recorded viewing experience</h1>
+      <p>This page is optimized for approved recorded YouTube programming and a future verified live feed.</p>
+      <nav aria-label="Primary">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/channels.html">Channels</a></li>
+          <li><a href="/youtube-media.html">YouTube Media</a></li>
+          <li><a href="/google-console.html">Google Console</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <h2>Live status</h2>
+        <p data-live-status>Checking live status…</p>
+        <div data-youtube-live-target></div>
+      </section>
+
+      <section class="grid">
+        <article class="card">
+          <h3>Featured recorded video</h3>
+          <p>Set <span class="code">featuredVideoId</span> in <span class="code">/config.js</span> when an approved recorded video is ready for display.</p>
+          <div data-youtube-featured-target></div>
+        </article>
+        <article class="card">
+          <h3>Recent uploads</h3>
+          <div data-youtube-uploads-target>
+            <ul class="upload-list">
+              <li>Loading upload metadata…</li>
+            </ul>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <footer>
+      <small>Recorded embeds do not expose a YouTube API key in page source.</small>
+    </footer>
+  </body>
+</html>

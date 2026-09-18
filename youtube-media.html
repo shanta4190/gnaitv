@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>YouTube Media | GNAI TV</title>
+    <meta name="description" content="YouTube media integration details for GNAI TV.">
+    <link rel="canonical" href="https://gnaitv.net/youtube-media.html">
+    <link rel="stylesheet" href="/assets/css/site.css">
+    <script src="/config.js" defer></script>
+    <script src="/assets/js/youtube-plugin.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <span class="badge">YouTube Media</span>
+      <h1>YouTube integration</h1>
+      <p>The iframe player is used for embeds, while upload metadata comes from a server-side Cloudflare Pages Function.</p>
+      <nav aria-label="Primary">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/watch.html">Watch</a></li>
+          <li><a href="/channels.html">Channels</a></li>
+          <li><a href="/google-console.html">Google Console</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="grid">
+        <article class="card">
+          <h2>Recorded media delivery</h2>
+          <p>The browser receives only embed URLs. API keys remain in Cloudflare environment variables and never in page source.</p>
+        </article>
+        <article class="card">
+          <h2>Upload metadata</h2>
+          <div data-youtube-uploads-target>
+            <ul class="upload-list">
+              <li>Loading upload metadata…</li>
+            </ul>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <footer>
+      <small>Only approved media should be embedded or distributed.</small>
+    </footer>
+  </body>
+</html>
