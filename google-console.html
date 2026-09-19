@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Google Console Setup | GNAI TV</title>
+    <link rel="stylesheet" href="/assets/css/site.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="shell brand">
+        <div>
+          <h1>Google Console setup checklist</h1>
+          <p class="muted">Reference steps for a restricted YouTube Data API key.</p>
+        </div>
+        <nav class="nav" aria-label="Primary">
+          <a href="/">Home</a>
+          <a href="/watch.html">Watch</a>
+          <a href="/youtube-media.html">YouTube Media</a>
+        </nav>
+      </div>
+    </header>
+    <main class="shell grid">
+      <section class="panel">
+        <ol>
+          <li>Create or select the GNAI TV project in Google Cloud Console.</li>
+          <li>Enable only YouTube Data API v3.</li>
+          <li>Create an API key and restrict it to that API.</li>
+          <li>Copy the public channel ID beginning with <code>UC</code>.</li>
+          <li>Store both values in Cloudflare Production variables instead of the repository.</li>
+        </ol>
+      </section>
+    </main>
+  </body>
+</html>
+

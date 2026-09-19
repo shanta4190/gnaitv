@@ -1,0 +1,10 @@
+/*
+  Content-Security-Policy: default-src 'self'; connect-src 'self' https://www.googleapis.com; frame-src https://www.youtube.com https://www.youtube-nocookie.com; img-src 'self' data: https://i.ytimg.com; media-src https://www.youtube.com https://www.youtube-nocookie.com; object-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; base-uri 'self'; frame-ancestors 'self'; form-action 'self'; upgrade-insecure-requests
+  Referrer-Policy: strict-origin-when-cross-origin
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: SAMEORIGIN
+  Permissions-Policy: camera=(), geolocation=(), microphone=()
+
+/api/*
+  Cache-Control: no-store
+

@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Watch | GNAI TV</title>
+    <meta name="description" content="Recorded YouTube playback page for GNAI TV.">
+    <link rel="stylesheet" href="/assets/css/site.css">
+    <script defer src="/config.js"></script>
+    <script defer src="/assets/js/youtube-plugin.js"></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="shell brand">
+        <div>
+          <h1>GNAI TV Watch</h1>
+          <p class="muted">Recorded programming only unless an authorized live configuration is separately enabled.</p>
+        </div>
+        <nav class="nav" aria-label="Primary">
+          <a href="/">Home</a>
+          <a href="/channels.html">Channels</a>
+          <a href="/youtube-media.html">YouTube Media</a>
+        </nav>
+      </div>
+    </header>
+    <main class="shell grid">
+      <section class="hero embed-shell">
+        <div>
+          <span class="badge">Recorded playback</span>
+          <h2>Watch page</h2>
+          <p id="watch-status" class="muted">Loading watch experience...</p>
+        </div>
+        <div id="player-shell"></div>
+      </section>
+
+      <section class="panel">
+        <h2>Current broadcast state</h2>
+        <p id="live-status" class="muted">Checking live status...</p>
+        <p>Use a <code>?video=YOUTUBE_VIDEO_ID</code> query parameter to load a specific recorded video without changing source files.</p>
+      </section>
+    </main>
+  </body>
+</html>
+

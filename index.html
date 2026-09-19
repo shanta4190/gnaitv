@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>GNAI TV</title>
+    <meta name="description" content="Cloudflare Pages deployment package for GNAI TV recorded media, channel information, and Pages Functions.">
+    <link rel="stylesheet" href="/assets/css/site.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="shell brand">
+        <div>
+          <h1>GNAI TV</h1>
+          <p class="muted">Recorded programming, channel information, and Cloudflare Pages Functions.</p>
+        </div>
+        <nav class="nav" aria-label="Primary">
+          <a href="/">Home</a>
+          <a href="/watch.html">Watch</a>
+          <a href="/channels.html">Channels</a>
+          <a href="/youtube-media.html">YouTube Media</a>
+          <a href="/google-console.html">Google Console</a>
+        </nav>
+      </div>
+    </header>
+    <main class="shell grid">
+      <section class="hero">
+        <span class="badge">Cloudflare Pages deployment target</span>
+        <h2>Deployable website package with Pages Functions</h2>
+        <p>This repository is ready to publish static pages plus root-level Cloudflare Pages Functions from the same deployment directory.</p>
+        <p class="muted">Current broadcast status: offline by design until an authorized live video configuration is independently verified.</p>
+        <div class="button-row">
+          <a href="/watch.html">Open watch page</a>
+          <a href="/api/health">Check API health</a>
+        </div>
+      </section>
+
+      <section class="status-grid" aria-label="Deployment status">
+        <article>
+          <h3>Static site</h3>
+          <p>Landing page, watch page, channel directory, and deployment reference pages are included at the repository root.</p>
+        </article>
+        <article>
+          <h3>API routes</h3>
+          <p><code>/api/health</code>, <code>/api/live</code>, and <code>/api/youtube-uploads</code> are implemented as Pages Functions.</p>
+        </article>
+        <article>
+          <h3>Publishing guardrails</h3>
+          <p>The site defaults to recorded playback and does not claim that a live broadcast is active.</p>
+        </article>
+      </section>
+
+      <section class="panel">
+        <h2>Deployment checklist</h2>
+        <ol>
+          <li>Connect the repository to the <strong>gnaitv</strong> Cloudflare Pages project.</li>
+          <li>Leave the build command empty and use <code>.</code> as the output directory.</li>
+          <li>Set the production environment variables for YouTube uploads only when ready.</li>
+          <li>Verify <code>/api/health</code>, <code>/api/live</code>, and <code>/api/youtube-uploads</code> after each deployment.</li>
+        </ol>
+      </section>
+    </main>
+    <footer class="site-footer shell muted">
+      <p>Deploy static files and the root <code>functions/</code> directory together on Cloudflare Pages.</p>
+    </footer>
+  </body>
+</html>
+

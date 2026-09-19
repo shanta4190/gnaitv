@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>YouTube Media | GNAI TV</title>
+    <link rel="stylesheet" href="/assets/css/site.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="shell brand">
+        <div>
+          <h1>YouTube Media</h1>
+          <p class="muted">Upload-list API reference for the public site.</p>
+        </div>
+        <nav class="nav" aria-label="Primary">
+          <a href="/">Home</a>
+          <a href="/watch.html">Watch</a>
+          <a href="/channels.html">Channels</a>
+        </nav>
+      </div>
+    </header>
+    <main class="shell grid two">
+      <section class="panel">
+        <h2>Endpoint</h2>
+        <pre><code>GET /api/youtube-uploads</code></pre>
+        <p>Without the required Cloudflare variables, the endpoint safely returns:</p>
+        <pre><code>{"configured": false}</code></pre>
+      </section>
+      <section class="panel">
+        <h2>When configured</h2>
+        <p>The endpoint returns recent uploads from the public channel uploads playlist and caches successful responses for five minutes.</p>
+        <p class="muted">The YouTube IFrame player does not expose the API key in page source.</p>
+      </section>
+    </main>
+  </body>
+</html>
+

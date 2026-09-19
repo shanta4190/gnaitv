@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Channels | GNAI TV</title>
+    <link rel="stylesheet" href="/assets/css/site.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="shell brand">
+        <div>
+          <h1>Channel Directory</h1>
+          <p class="muted">Reference page for approved public channels and feeds.</p>
+        </div>
+        <nav class="nav" aria-label="Primary">
+          <a href="/">Home</a>
+          <a href="/watch.html">Watch</a>
+          <a href="/youtube-media.html">YouTube Media</a>
+        </nav>
+      </div>
+    </header>
+    <main class="shell grid two">
+      <section class="panel">
+        <h2>Public channel identifiers</h2>
+        <p>Store the production YouTube channel ID in Cloudflare Pages variables instead of the repository.</p>
+        <pre><code>YOUTUBE_CHANNEL_ID=UC...</code></pre>
+      </section>
+      <section class="panel">
+        <h2>Approval controls</h2>
+        <ul>
+          <li>Only publish media that GNAI TV is authorized to embed or distribute.</li>
+          <li>Require human approval before any public broadcast status changes.</li>
+          <li>Keep private administration workflows outside the public site.</li>
+        </ul>
+      </section>
+    </main>
+  </body>
+</html>
+
