@@ -1,0 +1,1 @@
+export async function getUploads(){const r=await fetch("/api/youtube-uploads");if(!r.ok)throw new Error("Unable to load media");return r.json();}
