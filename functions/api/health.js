@@ -1,0 +1,1 @@
+export async function onRequestGet({env}){return Response.json({ok:true,service:"gnaitv",youtubeConfigured:Boolean(env.YOUTUBE_API_KEY&&env.YOUTUBE_CHANNEL_ID),checkedAt:new Date().toISOString()},{headers:{"Cache-Control":"no-store"}})}
