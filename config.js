@@ -1,0 +1,1 @@
+window.GNAITV_CONFIG=Object.freeze({site:"GNAI TV",domain:"gnaitv.net",liveDefault:false});
