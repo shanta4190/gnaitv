@@ -1,0 +1,1 @@
+export async function onRequestGet({env}){const id=env.GNAITV_LIVE_VIDEO_ID||"";const approved=env.GNAITV_LIVE_APPROVED==="true";const live=Boolean(id&&approved);return Response.json({live,status:live?"LIVE — VERIFIED":"OFFLINE",videoId:live?id:null},{headers:{"Cache-Control":"no-store"}})}
